@@ -1,4 +1,4 @@
-class CreatePolicyManagerTerms < ActiveRecord::Migration[5.1]
+class CreatePolicyManagerTerms < ActiveRecord::Migration
   def change
     create_table :policy_manager_terms do |t|
       t.text :description

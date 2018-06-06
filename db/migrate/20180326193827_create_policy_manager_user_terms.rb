@@ -1,4 +1,4 @@
-class CreatePolicyManagerUserTerms < ActiveRecord::Migration[5.1]
+class CreatePolicyManagerUserTerms < ActiveRecord::Migration
   def change
     create_table :policy_manager_user_terms do |t|
       t.integer :user_id, index: true
