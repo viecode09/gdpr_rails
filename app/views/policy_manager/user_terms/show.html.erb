@@ -27,7 +27,7 @@
         
         <%= I18n.t("terms_app.user_terms.show.accepted.question") %>
 
-        <%= form_with model: @user_term, url: reject_user_term_path(params[:id]), method: :put, local: true do |f| %>
+        <%= form_for @user_term, url: reject_user_term_path(params[:id]), method: :put, local: true do |f| %>
           <%= f.submit I18n.t("terms_app.user_terms.show.accepted.reject"), class: "btn btn-danger" %>
           <%= link_to I18n.t("terms_app.user_terms.show.pending.not_now"), pending_user_terms_path, class: "btn btn-secondary" %>
         <% end %>
@@ -42,7 +42,7 @@
       
       <%= I18n.t("terms_app.user_terms.show.pending.message") %>
 
-      <%= form_with model: @user_term, url: accept_user_term_path(params[:id]), method: :put, local: true do |f| %>
+      <%= form_for @user_term, url: accept_user_term_path(params[:id]), method: :put, local: true do |f| %>
         <%= f.submit I18n.t("terms_app.user_terms.show.pending.agree"), class: "btn btn-success" %>
         <%= link_to I18n.t("terms_app.user_terms.show.pending.not_now"), pending_user_terms_path, class: "btn btn-secondary" %>
       <% end %>
