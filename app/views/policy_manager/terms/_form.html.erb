@@ -1,12 +1,12 @@
 <% path = @term.persisted? ? category_term_path(params[:category_id], @term) : category_terms_path(params[:category_id]) %>
 
-<%= form_with(model: term, local: true, url: path ) do |form| %>
-  <% if term.errors.any? %>
+<%= form_with(model: @term, local: true, url: path ) do |form| %>
+  <% if @term.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(term.errors.count, "error") %> <%= I18n.t("terms_app.terms.new.error") %></h2>
+      <h2><%= pluralize(@term.errors.count, "error") %> <%= I18n.t("terms_app.terms.new.error") %></h2>
 
       <ul>
-      <% term.errors.full_messages.each do |message| %>
+      <% @term.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
