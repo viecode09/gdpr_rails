@@ -31,7 +31,7 @@
             -->
             
             <% if PolicyManager::Config.logout_url.present? %>
-              <a class="dropdown-item" href="<%= PolicyManager::Config.logout_url %>">
+              <a class="dropdown-item" href="<%= PolicyManager::Config.logout_url %>" data-method="delete">
                 <i class="dropdown-icon fe fe-log-out"></i>
                 <%= I18n.t("terms_app.sign_out") %>
               </a>
