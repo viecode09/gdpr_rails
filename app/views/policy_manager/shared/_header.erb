@@ -58,7 +58,7 @@
           <% if PolicyManager::Config.is_admin?(controller.current_user) %>
 
             <li class="nav-item">
-              <a class="nav-link" href="<%= authenticated_root_path %>">
+              <a class="nav-link" href="/">
                 <i class="fas fa-home"></i>
                 <%= I18n.t("terms_app.menu.policies") %>
               </a>

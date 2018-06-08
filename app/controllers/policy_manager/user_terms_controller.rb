@@ -50,9 +50,9 @@ module PolicyManager
       respond_to do |format|
         format.html{ 
           if @user_term.errors.any?
-            redirect_to authenticated_root_path , notice: "hey there are some errors! #{@user_term.errors.full_messages.join()}"
+            redirect_to "/" , notice: "hey there are some errors! #{@user_term.errors.full_messages.join()}"
           else
-            redirect_to authenticated_root_path
+            redirect_to "/"
           end
         }
         format.js
@@ -70,15 +70,15 @@ module PolicyManager
       respond_to do |format|
         format.html{ 
           if @user_term.errors.any?
-            redirect_to authenticated_root_path , notice: "hey there are some errors! #{@user_term.errors.full_messages.join()}"
+            redirect_to "/" , notice: "hey there are some errors! #{@user_term.errors.full_messages.join()}"
           else
-            redirect_to authenticated_root_path
+            redirect_to "/"
           end
         }
         format.js
         format.json{
           if @user_term.present? && @user_term.errors.any?
-            render json: { url: authenticated_root_path , notice: "hey there are some errors! #{@user_term.errors.full_messages.join()}" }
+            render json: { url: "/" , notice: "hey there are some errors! #{@user_term.errors.full_messages.join()}" }
           else
             render json: {
               state: @user_term ? @user_term.state : cookies["policy_rule_#{@term.rule.name}"]
