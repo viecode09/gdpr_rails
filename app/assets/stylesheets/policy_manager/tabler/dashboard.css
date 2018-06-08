@@ -8,7 +8,7 @@ Dashboard UI
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+/* :root {
   --blue: #467fcf;
   --indigo: #6574cd;
   --purple: #a55eea;
@@ -39,7 +39,7 @@ Dashboard UI
   --breakpoint-xl: 1280px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
+} */
 
 *,
 *::before,
