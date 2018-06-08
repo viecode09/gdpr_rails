@@ -58,6 +58,14 @@
           <% if PolicyManager::Config.is_admin?(controller.current_user) %>
 
             <li class="nav-item">
+              <a class="nav-link" href="<%= authenticated_root_path %>">
+                <i class="fas fa-home"></i>
+                <%= I18n.t("terms_app.menu.policies") %>
+              </a>
+            </li>
+
+
+            <li class="nav-item">
               <a class="nav-link" href="<%= categories_path %>">
                 <i class="fas fa-balance-scale"></i>
                 <%= I18n.t("terms_app.menu.policies") %>
