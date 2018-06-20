@@ -6,9 +6,7 @@ module PolicyManager
     def index
       @user_portability_requests = current_user.portability_requests
                                                .order(created_at: :desc)
-                                               .paginate(
-                                                :page => params[:page], 
-                                                :per_page => 10)
+                                               .page(params[:page]).per(10)
     end
 
     def create
