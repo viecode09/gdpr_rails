@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
   s.add_dependency "rails", ">= 4.2", "< 5.3"
   s.add_dependency "redcarpet"
-  s.add_dependency "kaminari"
+  s.add_dependency "will_paginate"
   s.add_dependency "aasm"
   s.add_dependency "rubyzip", '>= 1.0.0'
   s.add_dependency "paperclip"
